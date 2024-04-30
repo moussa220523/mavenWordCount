@@ -12,10 +12,10 @@ public class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable>
 			throws IOException, InterruptedException {
 		int sum = 0;
 		for (IntWritable val : values) {
-			System.out.println("value: " + val.get());
+			System.out.println("value : " + val.get());
 			sum += val.get();
 		}
-		System.out.println("---> Sum = " + sum);
+		System.out.println("-----> Sum = " + sum);
 		result.set(sum);
 		context.write(key, result);
 	}
