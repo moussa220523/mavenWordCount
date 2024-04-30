@@ -15,7 +15,7 @@ public class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable>
 			System.out.println("value: " + val.get());
 			sum += val.get();
 		}
-		System.out.println("--> Sum = " + sum);
+		System.out.println("---> Sum = " + sum);
 		result.set(sum);
 		context.write(key, result);
 	}
